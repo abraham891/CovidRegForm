@@ -1,0 +1,10 @@
+.container::-webkit-scrollbar {
+  display: none;
+}  
+.review-heading{
+  text-align: center;
+font-weight: bold;
+padding: 5px;
+
+color: #8941a8;
+}
