@@ -4,13 +4,6 @@ import { observer } from "mobx-react";
 import './review.css';
 
 export const Review = observer(() => {
-  const deleteUserData = (proofId) => {
-    const newArray = dataStore.records.filter(
-      (user) => user.proofId !== proofId
-    );
-    dataStore.setRecords([...newArray]);
-  };
-
   return (
     <div className="container">
       <h1 className="review-heading" >Review</h1>
@@ -45,7 +38,7 @@ export const Review = observer(() => {
                   <td>{phoneNumber}</td>
                   <td>
                     <button
-                      onClick={() => deleteUserData(proofId)}
+                      onClick={()=>dataStore.deleteUserInfo(proofId)}
                       className="btn btn-danger"
                     >
                       Delete

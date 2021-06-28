@@ -11,7 +11,9 @@ class DataStore {
 
   getUserDetailsInstance = () => (this.userDetails = new UserDetails());
   setUserInfo = () => this.records.push(this.userDetails);
-  setRecords = (newArray) => (this.records = newArray);
+  deleteUserInfo = (proofId) => {
+    this.records = this.records.filter((user) => user.proofId !== proofId);
+  };
   get getRecords() {
     return this.records;
   }
