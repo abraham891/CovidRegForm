@@ -1,5 +1,3 @@
-import { makeAutoObservable } from "mobx";
-
 export class UserDetails {
   name = "";
   gender = "";
@@ -8,10 +6,4 @@ export class UserDetails {
   vaccine = "";
   proof = "";
   proofId = "";
-
-  constructor() {
-    makeAutoObservable(this);
-  }
-
-
 }
